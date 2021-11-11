@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600;800&display=swap">
+    <title>Text Reverse</title>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1 class="title">Text Reverse</h1>
+    <div x-data="{ text: '' }" class="main">
+        <div class="input">
+            <label>Text to reverse:</label>
+            <input type="text" x-model="text"><br>
+        </div>
+        Reversed Text: <span x-text="text.split('').reverse().join('')">
+    </div>
+    <footer>
+        Made by
+        <a
+            href="https://github.com/Makiyu-py"
+            style="text-decoration-color: #3b5375;"
+            target="_blank"
+        >
+            Makiyu
+        </a>
+    </footer>
+</body>
+</html>
