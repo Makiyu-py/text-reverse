@@ -11,12 +11,17 @@
 </head>
 <body>
     <h1 class="title">Text Reverse</h1>
-    <div x-data="{ text: '' }" class="main">
+    <div x-data="{ text: '', rv: '', reversetext() { this.rv = this.text?.split('').reverse().join('') ?? '' } }" class="main">
         <div class="input">
             <label>Text to reverse:</label>
-            <input type="text" x-model="text"><br>
+            <input type="text" x-model="text" @input="reversetext"><br>
         </div>
-        Reversed Text: <span x-text="text.split('').reverse().join('')">
+        Reversed Text:
+            <span
+                x-text="rv"
+                @click="navigator.clipboard.writeText(rv).then(() => { alert('Text has been copied to clipboard!') })"
+                class="rv-txt"
+            >
     </div>
     <footer>
         Made by

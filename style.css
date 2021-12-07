@@ -31,3 +31,7 @@ footer {
 .input {
 	margin-bottom: 3%;
 }
+
+.rv-txt:hover {
+	border-bottom: 1px dotted var(--font-color);
+}
